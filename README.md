@@ -23,7 +23,7 @@ I focus on agents that are production-ready — properly configured, defensively
 
 | Agent | Pattern | Stack |
 |---|---|---|
-| [Deep Research Agent](https://github.com/Paul-Orlando/deep-research-agent) | Full-Stack Research App | Claude Code · Next.js · OpenRouter · Exa AI · TypeScript |
+| [Deep Research Agent](https://github.com/Paul-Orlando/deep-research-agent) ← [**Live Demo**](https://deep-research-agent-five.vercel.app/) | Full-Stack Research App | Claude Code · Next.js · OpenRouter · Exa AI · TypeScript |
 | [AI Agent Team — Supervisor Pattern](https://github.com/Paul-Orlando/ai-agent-team-supervisor-pattern) | Supervisor Orchestration | Flowise AgentFlows V2/V3 · GPT-4o · LangChain |
 | [AI Food Chatbot Agent](https://github.com/Paul-Orlando/ai-food-chatbot-agent) | Agentic RAG + Tool Routing | Flowise · GPT-4o · Postgres · OpenAI Moderation |
 | [AI Multi-Agent Content Pipeline](https://github.com/Paul-Orlando/ai-multi-agent-content-pipeline) | Sequential Multi-Agent | Flowise · GPT-4o · FAISS · RAG |
