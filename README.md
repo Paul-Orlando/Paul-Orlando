@@ -23,6 +23,7 @@ I focus on agents that are production-ready — properly configured, defensively
 
 | Agent | Pattern | Stack | Demo |
 |---|---|---|---|
+| [AI Document Generator](https://github.com/Paul-Orlando/ai-n8n-document-generator) | LLM Chain + Quality Gate | n8n · OpenRouter · GPT-4.1 · LangChain | — |
 | [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenAI · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
 | [Deep Research Agent App](https://github.com/Paul-Orlando/deep-research-agent) | Full-Stack Research App | Claude Code · Next.js · OpenRouter · Exa AI · TypeScript | [🔗 Live](https://deep-research-agent-five.vercel.app/) |
 | [AI Agent Team — Supervisor Pattern](https://github.com/Paul-Orlando/ai-agent-team-supervisor-pattern) | Supervisor Orchestration | Flowise AgentFlows V2/V3 · GPT-4o · LangChain | — |
