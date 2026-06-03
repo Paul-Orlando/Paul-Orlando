@@ -41,7 +41,7 @@ I focus on agents that are production-ready — properly configured, defensively
 
 **Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications
 
-**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Railway · Vercel
+**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n . TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Railway · Vercel
 
 **Disciplines** — 3D Visualization · Generative AI · Data Analytics
 
