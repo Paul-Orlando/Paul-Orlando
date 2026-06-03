@@ -23,6 +23,7 @@ I focus on agents that are production-ready — properly configured, defensively
 
 | Agent | Pattern | Stack | Demo |
 |---|---|---|---|
+| [Food Chatbot App](https://github.com/Paul-Orlando/food-chatbot-app) | Agentic RAG + Cart | Next.js · FastAPI · ChromaDB · OpenAI | [🔗 Live](https://food-chatbot-app.vercel.app) |
 | [AI Agent Team Supervisor App](https://github.com/Paul-Orlando/ai-agent-team-supervisor-app) | Supervisor Pattern | OpenAI Agents SDK · Next.js · FastAPI · ChromaDB | [🔗 Live](https://ai-agent-team-supervisor-app.vercel.app) |
 | [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenAI · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
 | [Deep Research Agent App](https://github.com/Paul-Orlando/deep-research-agent) | Full-Stack Research App | Claude Code · Next.js · OpenRouter · Exa AI · TypeScript | [🔗 Live](https://deep-research-agent-five.vercel.app/) |
