@@ -14,39 +14,6 @@ Based in US & EU/Ireland.
 Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
 
 I focus on agents that are production-ready — properly configured, defensively prompted, and designed to fail gracefully. Not just demos.
-```
-
-The original had the `What I Build` line wrapped in triple backticks as a code block — I've removed that so it renders as plain text. Everything else stays the same.
-
----
-
-## What I Build
-
-```
-Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
-```
-
-Here's your updated profile README with the new repo added to the table and ArtStation linked under Disciplines:
-
-```markdown
-# Paul Orlando
-**Creative Technologist & AI Agent Developer**
-
-I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, and enterprise AI architecture.
-
-Based in US & EU/Ireland.
-
-🌐 [paulforlando.com](http://www.paulforlando.com) &nbsp;|&nbsp; 💼 [LinkedIn](https://www.linkedin.com/in/paul-orlando-7841b5154/) &nbsp;|&nbsp; 📧 Available for freelance & consulting
-
----
-
-## What I Build
-
-```
-Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
-```
-
-I focus on agents that are production-ready — properly configured, defensively prompted, and designed to fail gracefully. Not just demos.
 
 ---
 
@@ -97,7 +64,3 @@ Every agent in this portfolio is built with the same standard:
 - Temperature tuned to the use case — not left at default
 - Failure modes addressed — iteration caps, moderation, fallbacks
 - Production considerations documented — memory, security, deployment
-
----
-
-The key additions are the **AI Product Visualization section** between the agent table and Core Skills, and **AI Product Visualization** added to your Disciplines line.
