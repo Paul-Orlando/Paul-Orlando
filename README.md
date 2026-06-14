@@ -1,7 +1,7 @@
 # Paul Orlando
 **Creative Technologist & AI Agent Developer**
 
-I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, and enterprise AI architecture.
+I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, and enterprise AI architecture. I also apply generative AI tools and prompt engineering techniques to produce commercial brand imagery for major retail clients.
 
 Based in US & EU/Ireland.
 
@@ -39,7 +39,12 @@ I focus on agents that are production-ready — properly configured, defensively
 
 ## AI Product Visualization
 
-AI-generated commercial product lifestyle imagery for major retail clients.
+I use generative AI tools with prompt engineering techniques to produce brand imagery for major retail clients across the following disciplines:
+
+- Generative AI Image Creation
+- AI Art Direction
+- Commercial Product Visualization
+- Lifestyle Imagery
 
 🔗 [View Portfolio on ArtStation](https://paulorlando.artstation.com/albums/15070123) &nbsp;|&nbsp; [Repository](https://github.com/Paul-Orlando/ai-product-visualization)
 
