@@ -15,6 +15,26 @@ Based in US & EU/Ireland.
 Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
 ```
 
+Here's your updated profile README with the new repo added to the table and ArtStation linked under Disciplines:
+
+```markdown
+# Paul Orlando
+**Creative Technologist & AI Agent Developer**
+
+I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, and enterprise AI architecture.
+
+Based in US & EU/Ireland.
+
+🌐 [paulforlando.com](http://www.paulforlando.com) &nbsp;|&nbsp; 💼 [LinkedIn](https://www.linkedin.com/in/paul-orlando-7841b5154/) &nbsp;|&nbsp; 📧 Available for freelance & consulting
+
+---
+
+## What I Build
+
+```
+Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
+```
+
 I focus on agents that are production-ready — properly configured, defensively prompted, and designed to fail gracefully. Not just demos.
 
 ---
@@ -39,13 +59,21 @@ I focus on agents that are production-ready — properly configured, defensively
 
 ---
 
+## AI Product Visualization
+
+AI-generated commercial product lifestyle imagery for major retail clients.
+
+🔗 [View Portfolio on ArtStation](https://paulorlando.artstation.com/albums/15070123) &nbsp;|&nbsp; [Repository](https://github.com/Paul-Orlando/ai-product-visualization)
+
+---
+
 ## Core Skills
 
 **Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development
 
 **Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · MCP Protocol · Railway · Vercel
 
-**Disciplines** — 3D Visualization · Generative AI · Data Analytics
+**Disciplines** — 3D Visualization · Generative AI · Data Analytics · AI Product Visualization
 
 ---
 
@@ -60,3 +88,5 @@ Every agent in this portfolio is built with the same standard:
 - Production considerations documented — memory, security, deployment
 
 ---
+
+The key additions are the **AI Product Visualization section** between the agent table and Core Skills, and **AI Product Visualization** added to your Disciplines line.
