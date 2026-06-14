@@ -11,6 +11,17 @@ Based in US & EU/Ireland.
 
 ## What I Build
 
+Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
+
+I focus on agents that are production-ready — properly configured, defensively prompted, and designed to fail gracefully. Not just demos.
+```
+
+The original had the `What I Build` line wrapped in triple backticks as a code block — I've removed that so it renders as plain text. Everything else stays the same.
+
+---
+
+## What I Build
+
 ```
 Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
 ```
