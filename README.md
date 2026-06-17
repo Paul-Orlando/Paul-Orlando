@@ -37,7 +37,7 @@ I focus on agents that are production-ready — properly configured, defensively
 
 ---
 
-## AI Product Visualization
+## 🎨 Creative Work — AI Product Visualization
 
 I use generative AI tools with prompt engineering techniques to produce brand imagery for major retail clients across the following disciplines:
 
@@ -69,3 +69,7 @@ Every agent in this portfolio is built with the same standard:
 - Temperature tuned to the use case — not left at default
 - Failure modes addressed — iteration caps, moderation, fallbacks
 - Production considerations documented — memory, security, deployment
+
+---
+
+*Open to collaboration on agent design, AI workflow architecture, and creative technology projects.*
