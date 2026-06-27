@@ -25,7 +25,8 @@ I focus on agents that are production-ready — properly configured, defensively
 | [AI Agent Team Supervisor App](https://github.com/Paul-Orlando/ai-agent-team-supervisor-app) | Supervisor Pattern | OpenAI Agents SDK · Next.js · FastAPI · ChromaDB | [🔗 Live](https://ai-agent-team-supervisor-app.vercel.app) |
 | [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenAI · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
 | [Deep Research Agent App](https://github.com/Paul-Orlando/deep-research-agent) | Full-Stack Research App | Claude Code · Next.js · OpenRouter · Exa AI · TypeScript | [🔗 Live](https://deep-research-agent-five.vercel.app/) |
-| [Web Research Hub](https://github.com/Paul-Orlando/web-research-hub) | Hierarchical 3-Agent Pipeline | Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI | [🔗 Live](https://web-research-hub.vercel.app/) |
+| [Web Research Hub](https://github.com/Paul-Orlando/web-research-hub) | Hierarchical 3-Agent Pipeline + MCP | Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI · MCP | [🔗 Live](https://web-research-hub.vercel.app/) |
+| [Web Research Hub MCP Server](https://github.com/Paul-Orlando/web-research-hub-mcp-server) | Custom MCP Server · Research Tools | FastAPI · FastMCP · Streamable HTTP · Exa AI · Python | [🔗 Live](https://web-research-hub-mcp-server-production.up.railway.app/health) |
 | [GenAI Concepts Chat](https://github.com/Paul-Orlando/n8n-mcp-server-agentic-rag) | Agentic RAG + Custom MCP Server | Node.js · Express · TypeScript · Pinecone · OpenRouter · Gemini Flash 2.5 | [🔗 Live](https://n8n-mcp-server-agentic-rag-production.up.railway.app) |
 | [Pinecone Agentic Search MCP Server](https://github.com/Paul-Orlando/pinecone-mcp-server) | Custom MCP Server · Agentic RAG | Node.js · TypeScript · Pinecone · OpenRouter · MCP Protocol · Railway | [🔗 Live](https://pinecone-mcp-server-production-189c.up.railway.app/health) |
 | [AI Document Generator](https://github.com/Paul-Orlando/ai-n8n-document-generator) | LLM Chain + Quality Gate | n8n · OpenRouter · GPT-4.1 · LangChain | — |
@@ -55,7 +56,7 @@ I use generative AI tools with prompt engineering techniques to produce brand im
 
 **Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development
 
-**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · MCP Protocol · Railway · Vercel
+**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · FastMCP · MCP Protocol · Railway · Vercel
 
 **Disciplines** — 3D Visualization · Generative AI · Data Analytics · AI Product Visualization
 
