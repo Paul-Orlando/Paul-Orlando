@@ -74,4 +74,19 @@ Every agent in this portfolio is built with the same standard:
 
 ---
 
+## 🔒 Production Standards
+
+Every live application in this portfolio is built with production-grade security and cost controls — not just functional demos.
+
+**MCP Server Security**
+Both custom MCP servers implement API key authentication (`X-API-Key` header, 401 on invalid key) and sliding-window rate limiting (5–10 requests/IP/hour, 429 on exceed) with self-host instructions embedded in every error response. Rate limiting is implemented as pure middleware without third-party auth frameworks — correct IP detection behind Railway's proxy via `X-Forwarded-For` header parsing.
+
+**Cost Protection**
+All LLM API keys (OpenAI, OpenRouter) are capped at hard monthly spend limits. Exa AI auto-recharge is capped per calendar month. Rate limiting at the infrastructure layer provides the first line of defense; spend caps at the provider level provide a hard ceiling if rate limiting is ever bypassed.
+
+**Why This Matters**
+A publicly accessible AI agent with no rate limiting and no spend caps is a liability, not a portfolio piece. These controls reflect awareness of real production concerns — not just "does it work" but "what happens when real users, or bad actors, find it."
+
+---
+
 *Open to collaboration on agent design, AI workflow architecture, and creative technology projects.*
