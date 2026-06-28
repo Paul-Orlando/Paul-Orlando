@@ -84,8 +84,13 @@ Both custom MCP servers implement API key authentication (`X-API-Key` header, 40
 **Cost Protection**
 All LLM API keys (OpenAI, OpenRouter) are capped at hard monthly spend limits. Exa AI auto-recharge is capped per calendar month. Rate limiting at the infrastructure layer provides the first line of defense; spend caps at the provider level provide a hard ceiling if rate limiting is ever bypassed.
 
-**Why This Matters**
-A publicly accessible AI agent with no rate limiting and no spend caps is a liability, not a portfolio piece. These controls reflect awareness of real production concerns — not just "does it work" but "what happens when real users, or bad actors, find it."
+Production AI systems require controls at every layer —
+request-level rate limiting, infrastructure-level
+authentication, and provider-level spend caps. Each
+application in this portfolio is built with all three,
+reflecting the same standards applied in enterprise
+deployments where cost, security, and reliability are
+non-negotiable.
 
 ---
 
