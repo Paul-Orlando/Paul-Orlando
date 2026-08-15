@@ -1,7 +1,7 @@
 # Paul Orlando
 **Creative Technologist & AI Agent Developer**
 
-I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, and enterprise AI architecture. I also apply generative AI tools and prompt engineering techniques to produce commercial brand imagery for major retail clients.
+I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, enterprise AI architecture, and serverless deployment patterns. I also apply generative AI tools and prompt engineering techniques to produce commercial brand imagery for major retail clients.
 
 Based in US & EU/Ireland.
 
@@ -11,9 +11,31 @@ Based in US & EU/Ireland.
 
 ## What I Build
 
-Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications
+Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications → Serverless Production Systems
 
 I focus on agents that are production-ready — properly configured, defensively prompted, and designed to fail gracefully. Not just demos.
+
+---
+
+## AWS & Enterprise Work
+
+### Serverless Agentic AI Travel Agent
+**Production-ready enterprise agentic AI on AWS**
+
+A fully functional travel booking agent demonstrating serverless multi-tool agent orchestration:
+
+- **Agent Framework:** Strands SDK + Bedrock Nova Lite
+- **Memory:** S3 SessionManager for persistent conversation history
+- **RAG:** Bedrock Knowledge Bases for private data access
+- **Extensibility:** Model Context Protocol (MCP) dynamic tool loading
+- **API:** Secure HTTP via API Gateway + Cognito OAuth2
+- **Scale:** Handles 1000+ concurrent requests, ~$0.02/request
+
+**Pattern:** Multi-tool orchestration → Persistent memory → RAG integration → Secure API exposure
+
+**GitHub:** [serverless-agentic-ai-travel-agent](https://github.com/Paul-Orlando/serverless-agentic-ai-travel-agent)
+
+**Stack:** Strands SDK · Bedrock · Lambda · API Gateway · Cognito · S3 · Knowledge Bases
 
 ---
 
@@ -21,6 +43,7 @@ I focus on agents that are production-ready — properly configured, defensively
 
 | Agent | Pattern | Stack | Demo |
 |---|---|---|---|
+| [Serverless Agentic AI Travel Agent](https://github.com/Paul-Orlando/serverless-agentic-ai-travel-agent) | Multi-Tool Orchestration + Memory + RAG | Strands SDK · Bedrock · Lambda · API Gateway · Cognito · S3 | [🔗 Repo](https://github.com/Paul-Orlando/serverless-agentic-ai-travel-agent) |
 | [Food Chatbot App](https://github.com/Paul-Orlando/food-chatbot-app) | Agentic RAG + Cart | Next.js · FastAPI · ChromaDB · OpenAI | [🔗 Live](https://food-chatbot-app.vercel.app) |
 | [AI Agent Team Supervisor App](https://github.com/Paul-Orlando/ai-agent-team-supervisor-app) | Supervisor Pattern | OpenAI Agents SDK · Next.js · FastAPI · ChromaDB | [🔗 Live](https://ai-agent-team-supervisor-app.vercel.app) |
 | [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenAI · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
@@ -54,11 +77,13 @@ I use generative AI tools with prompt engineering techniques to produce brand im
 
 ## Core Skills
 
-**Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development
+**Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development, serverless agent deployment
 
-**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · FastMCP · MCP Protocol · Railway · Vercel
+**Cloud & Infrastructure** — AWS Lambda, API Gateway, Bedrock, Cognito, S3, Knowledge Bases, CloudWatch, serverless architecture patterns
 
-**Disciplines** — 3D Visualization · Generative AI · Data Analytics · AI Product Visualization
+**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · FastMCP · MCP Protocol · Railway · Vercel · Strands SDK
+
+**Disciplines** — 3D Visualization · Generative AI · Data Analytics · AI Product Visualization · Serverless Architecture
 
 ---
 
@@ -81,17 +106,14 @@ Every live application in this portfolio is built with production-grade security
 **MCP Server Security**
 Both custom MCP servers implement API key authentication (`X-API-Key` header, 401 on invalid key) and sliding-window rate limiting (5–10 requests/IP/hour, 429 on exceed) with self-host instructions embedded in every error response. Rate limiting is implemented as pure middleware without third-party auth frameworks — correct IP detection behind Railway's proxy via `X-Forwarded-For` header parsing.
 
+**AWS Lambda Security & Scalability**
+The serverless agentic AI system implements Cognito OAuth2 authentication, per-user session isolation, S3-backed state management, and automatic horizontal scaling. Infrastructure costs are controlled through serverless pay-per-use pricing (~$0.02/request), with no idle server overhead.
+
 **Cost Protection**
 All LLM API keys (OpenAI, OpenRouter) are capped at hard monthly spend limits. Exa AI auto-recharge is capped per calendar month. Rate limiting at the infrastructure layer provides the first line of defense; spend caps at the provider level provide a hard ceiling if rate limiting is ever bypassed.
 
-Production AI systems require controls at every layer —
-request-level rate limiting, infrastructure-level
-authentication, and provider-level spend caps. Each
-application in this portfolio is built with all three,
-reflecting the same standards applied in enterprise
-deployments where cost, security, and reliability are
-non-negotiable.
+Production AI systems require controls at every layer — request-level rate limiting, infrastructure-level authentication, provider-level spend caps, and cloud-native security. Each application in this portfolio is built with these standards, reflecting practices applied in enterprise deployments where cost, security, and reliability are non-negotiable.
 
 ---
 
-*Open to collaboration on agent design, AI workflow architecture, and creative technology projects.*
+*Open to collaboration on agent design, AI workflow architecture, serverless AI systems, and creative technology projects.*
