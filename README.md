@@ -1,7 +1,7 @@
 # Paul Orlando
 **Creative Technologist & AI Agent Developer**
 
-I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, enterprise AI architecture, and serverless deployment patterns. I also apply generative AI tools and prompt engineering techniques to produce commercial brand imagery for major retail clients.
+I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, enterprise AI architecture, real-time streaming systems, and serverless deployment patterns. I also apply generative AI tools and prompt engineering techniques to produce commercial brand imagery for major retail clients.
 
 Based in US & EU/Ireland.
 
@@ -11,13 +11,34 @@ Based in US & EU/Ireland.
 
 ## What I Build
 
-Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Full-Stack AI Applications → Serverless Production Systems
+Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Real-Time Full-Stack AI Applications → Serverless Production Systems
 
-I focus on agents that are production-ready — properly configured, defensively prompted, and designed to fail gracefully. Not just demos.
+I focus on agents that are production-ready — properly configured, defensively prompted, designed to fail gracefully, and protected with cost controls and rate limiting. Not just demos.
 
 ---
 
-## AWS & Enterprise Work
+## Production AI Systems
+
+### FinAlly — AI Trading Workstation
+**Multi-agent trading system with real-time streaming and production safety controls**
+
+A visually stunning AI-powered trading platform demonstrating multi-agent orchestration, real-time data streaming, domain-specific logic, and enterprise-grade cost protection:
+
+- **5-Agent Orchestration:** Portfolio (execution), Risk (validation), Analyzer (insights), Watchlist (management), Chat Orchestrator (LLM routing)
+- **Real-Time Streaming:** Server-sent events (SSE) for live price updates with flash animations
+- **Domain Logic:** Portfolio mathematics, P&L tracking, position constraints, audit logging
+- **Testing:** Playwright E2E suite (10 tests, 4 consecutive fresh runs, all passing)
+- **Cost Protection:** Dual-layer rate limiting (15 chat/hr, 20 trades/hr code-level + $5 monthly provider cap)
+- **Deployment:** Docker multi-stage build, Railway serverless, automatic health checks
+
+**Pattern:** Deterministic agents (Risk, Portfolio, Analyzer) + LLM orchestrator → Real-time state management → Atomic transactions → E2E tested
+
+**GitHub:** [multi_agent_trading_app](https://github.com/Paul-Orlando/multi_agent_trading_app)  
+**Live:** [multiagenttradingapp-production.up.railway.app](https://multiagenttradingapp-production.up.railway.app)
+
+**Stack:** FastAPI · Next.js · SQLite · Playwright · Cerebras/OpenRouter · SSE · Railway
+
+---
 
 ### Serverless Agentic AI Travel Agent
 **Production-ready enterprise agentic AI on AWS**
@@ -43,6 +64,7 @@ A fully functional travel booking agent demonstrating serverless multi-tool agen
 
 | Agent | Pattern | Stack | Demo |
 |---|---|---|---|
+| [FinAlly Trading App](https://github.com/Paul-Orlando/multi_agent_trading_app) | Multi-Agent + Real-Time Streaming + E2E Tested | FastAPI · Next.js · SQLite · Playwright · Railway · Cerebras | [🔗 Live](https://multiagenttradingapp-production.up.railway.app) |
 | [Prelegal](https://github.com/Paul-Orlando/prelegal_document_app) | AI Interview + Document Assembly | Node.js · Express · SQLite · OpenRouter · Common Paper Templates | [🔗 Live](https://prelegaldocumentapp-production.up.railway.app/) |
 | [Serverless Agentic AI Travel Agent](https://github.com/Paul-Orlando/serverless-agentic-ai-travel-agent) | Multi-Tool Orchestration + Memory + RAG | Strands SDK · Bedrock · Lambda · API Gateway · Cognito · S3 | [🔗 Repo](https://github.com/Paul-Orlando/serverless-agentic-ai-travel-agent) |
 | [Food Chatbot App](https://github.com/Paul-Orlando/food-chatbot-app) | Agentic RAG + Cart | Next.js · FastAPI · ChromaDB · OpenAI | [🔗 Live](https://food-chatbot-app.vercel.app) |
@@ -78,13 +100,13 @@ I use generative AI tools with prompt engineering techniques to produce brand im
 
 ## Core Skills
 
-**Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development, serverless agent deployment
+**Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development, serverless agent deployment, real-time streaming systems
 
-**Cloud & Infrastructure** — AWS Lambda, API Gateway, Bedrock, Cognito, S3, Knowledge Bases, CloudWatch, serverless architecture patterns
+**Cloud & Infrastructure** — AWS Lambda, API Gateway, Bedrock, Cognito, S3, Knowledge Bases, CloudWatch, serverless architecture patterns, Railway, Docker multi-stage builds
 
-**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · FastMCP · MCP Protocol · Railway · Vercel · Strands SDK
+**Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · FastMCP · MCP Protocol · Railway · Vercel · Strands SDK · Cerebras
 
-**Disciplines** — 3D Visualization · Generative AI · Data Analytics · AI Product Visualization · Serverless Architecture
+**Disciplines** — 3D Visualization · Generative AI · Data Analytics · AI Product Visualization · Serverless Architecture · Real-Time Systems
 
 ---
 
@@ -96,7 +118,7 @@ Every agent in this portfolio is built with the same standard:
 - Tool descriptions written as policies, not labels
 - Temperature tuned to the use case — not left at default
 - Failure modes addressed — iteration caps, moderation, fallbacks
-- Production considerations documented — memory, security, deployment
+- Production considerations documented — memory, security, deployment, cost controls
 
 ---
 
@@ -104,8 +126,11 @@ Every agent in this portfolio is built with the same standard:
 
 Every live application in this portfolio is built with production-grade security and cost controls — not just functional demos.
 
+**Real-Time System Resilience**
+FinAlly demonstrates real-time state management with SSE streaming, connection status indicators, automatic reconnection, and atomic database transactions. The system handles concurrent requests with in-memory rate limiting and maintains audit logs for compliance.
+
 **MCP Server Security**
-Both custom MCP servers implement API key authentication (`X-API-Key` header, 401 on invalid key) and sliding-window rate limiting (5–10 requests/IP/hour, 429 on exceed) with self-host instructions embedded in every error response. Rate limiting is implemented as pure middleware without third-party auth frameworks — correct IP detection behind Railway's proxy via `X-Forwarded-For` header parsing.
+Custom MCP servers implement API key authentication (`X-API-Key` header, 401 on invalid key) and sliding-window rate limiting (5–10 requests/IP/hour, 429 on exceed) with self-host instructions embedded in every error response. Rate limiting is implemented as pure middleware without third-party auth frameworks — correct IP detection behind Railway's proxy via `X-Forwarded-For` header parsing.
 
 **AWS Lambda Security & Scalability**
 The serverless agentic AI system implements Cognito OAuth2 authentication, per-user session isolation, S3-backed state management, and automatic horizontal scaling. Infrastructure costs are controlled through serverless pay-per-use pricing (~$0.02/request), with no idle server overhead.
@@ -113,8 +138,8 @@ The serverless agentic AI system implements Cognito OAuth2 authentication, per-u
 **Cost Protection**
 All LLM API keys (OpenAI, OpenRouter) are capped at hard monthly spend limits. Exa AI auto-recharge is capped per calendar month. Rate limiting at the infrastructure layer provides the first line of defense; spend caps at the provider level provide a hard ceiling if rate limiting is ever bypassed.
 
-Production AI systems require controls at every layer — request-level rate limiting, infrastructure-level authentication, provider-level spend caps, and cloud-native security. Each application in this portfolio is built with these standards, reflecting practices applied in enterprise deployments where cost, security, and reliability are non-negotiable.
+Production AI systems require controls at every layer — request-level rate limiting, infrastructure-level authentication, provider-level spend caps, and cloud-native security. Each application in this portfolio is built with these standards, reflecting practices applied in enterprise deployments where cost, security, reliability, and real-time performance are non-negotiable.
 
 ---
 
-*Open to collaboration on agent design, AI workflow architecture, serverless AI systems, and creative technology projects.*
+*Open to collaboration on agent design, AI workflow architecture, serverless AI systems, real-time applications, and creative technology projects.*
