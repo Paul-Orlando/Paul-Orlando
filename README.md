@@ -1,8 +1,8 @@
-[README.md](https://github.com/user-attachments/files/33584750/README.md)
+[README.md](https://github.com/user-attachments/files/33584803/README.md)
 # Paul Orlando
 **Creative Technologist & AI Agent Developer**
 
-I design and build production-grade AI agent systems — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, enterprise AI architecture, real-time streaming systems, and serverless deployment patterns. I also apply generative AI tools and prompt engineering techniques to produce commercial brand imagery for major retail clients.
+I design and build AI agent systems to production standards — from single-agent RAG pipelines to multi-agent orchestration frameworks. My work spans agentic workflow design, retrieval-augmented generation, prompt engineering, full-stack AI applications, AI system architecture, real-time streaming systems, and serverless deployment patterns. I also apply generative AI tools and prompt engineering techniques to produce commercial brand imagery for major retail clients.
 
 Based in US & EU/Ireland.
 
@@ -12,13 +12,13 @@ Based in US & EU/Ireland.
 
 ## What I Build
 
-Single Agents → Multi-Agent Systems → Enterprise Orchestration Pipelines → Real-Time Full-Stack AI Applications → Serverless Production Systems
+Single Agents → Multi-Agent Systems → Orchestration Pipelines → Real-Time Full-Stack AI Applications → Serverless Production Systems
 
-I focus on agents that are production-ready — properly configured, defensively prompted, designed to fail gracefully, and protected with cost controls and rate limiting. Not just demos.
+I build every agent as if it were going to production — properly configured, defensively prompted, designed to fail gracefully, protected with cost controls and rate limiting, and measured where it matters.
 
 ---
 
-## Production AI Systems
+## Featured AI Systems
 
 ### Gatewell Parts Desk — AI Operations Assistant for Auto Parts Distribution
 **Role-aware AI assistant with server-side guardrails, measured by a 50-question evaluation**
@@ -47,7 +47,7 @@ An employee-facing operations app for a fictional U.S. auto parts distributor (1
 ### FinAlly — AI Trading Workstation
 **Multi-agent trading system with real-time streaming and production safety controls**
 
-A visually stunning AI-powered trading platform demonstrating multi-agent orchestration, real-time data streaming, domain-specific logic, and enterprise-grade cost protection:
+An AI-powered trading platform demonstrating multi-agent orchestration, real-time data streaming, domain-specific logic, and layered cost protection:
 
 - **5-Agent Orchestration:** Portfolio (execution), Risk (validation), Analyzer (insights), Watchlist (management), Chat Orchestrator (LLM routing)
 - **Real-Time Streaming:** Server-sent events (SSE) for live price updates with flash animations
@@ -66,7 +66,7 @@ A visually stunning AI-powered trading platform demonstrating multi-agent orches
 ---
 
 ### Serverless Agentic AI Travel Agent
-**Production-ready enterprise agentic AI on AWS**
+**Serverless agentic AI on AWS, built to production standards**
 
 A fully functional travel booking agent demonstrating serverless multi-tool agent orchestration:
 
@@ -75,7 +75,7 @@ A fully functional travel booking agent demonstrating serverless multi-tool agen
 - **RAG:** Bedrock Knowledge Bases for private data access
 - **Extensibility:** Model Context Protocol (MCP) dynamic tool loading
 - **API:** Secure HTTP via API Gateway + Cognito OAuth2
-- **Scale:** Handles 1000+ concurrent requests, ~$0.02/request
+- **Scale:** Serverless auto-scaling (Lambda + API Gateway), estimated ~$0.02/request
 
 **Pattern:** Multi-tool orchestration → Persistent memory → RAG integration → Secure API exposure
 
@@ -151,7 +151,7 @@ Every agent in this portfolio is built with the same standard:
 
 ## 🔒 Production Standards
 
-Every live application in this portfolio is built with production-grade security and cost controls — not just functional demos.
+Every live application in this portfolio is built with production-style security and cost controls, even as a demo.
 
 **Real-Time System Resilience**
 FinAlly demonstrates real-time state management with SSE streaming, connection status indicators, automatic reconnection, and atomic database transactions. The system handles concurrent requests with in-memory rate limiting and maintains audit logs for compliance.
@@ -168,7 +168,7 @@ The serverless agentic AI system implements Cognito OAuth2 authentication, per-u
 **Cost Protection**
 All LLM API keys (OpenAI, OpenRouter) are capped at hard monthly spend limits. Exa AI auto-recharge is capped per calendar month. Rate limiting at the infrastructure layer provides the first line of defense; spend caps at the provider level provide a hard ceiling if rate limiting is ever bypassed.
 
-Production AI systems require controls at every layer — request-level rate limiting, infrastructure-level authentication, provider-level spend caps, and cloud-native security. Each application in this portfolio is built with these standards, reflecting practices applied in enterprise deployments where cost, security, reliability, and real-time performance are non-negotiable.
+Production AI systems require controls at every layer — request-level rate limiting, infrastructure-level authentication, provider-level spend caps, and cloud-native security. Each application in this portfolio is built with these standards, following the practices real deployments need, where cost, security, reliability, and real-time performance are non-negotiable.
 
 ---
 
