@@ -99,8 +99,9 @@ A fully functional travel booking agent demonstrating serverless multi-tool agen
 | [Deep Research Agent App](https://github.com/Paul-Orlando/deep-research-agent-app) | Full-Stack Research App | Claude Code · Next.js · OpenRouter · Exa AI · TypeScript | [🔗 Live](https://deep-research-agent-app.vercel.app) |
 | [Web Research Hub](https://github.com/Paul-Orlando/web-research-hub) | Hierarchical 3-Agent Pipeline + MCP | Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI · MCP | [🔗 Live](https://web-research-hub.vercel.app) |
 | [Web Research Hub MCP Server](https://github.com/Paul-Orlando/web-research-hub-mcp-server) | Custom MCP Server · Research Tools | FastAPI · FastMCP · Streamable HTTP · Exa AI · Python | [🔗 Live](https://web-research-hub-mcp.onrender.com) |
-| [GenAI Concepts Chat](https://github.com/Paul-Orlando/genai-concepts-chat) | Agentic RAG + Custom MCP Server | Node.js · Express · TypeScript · Pinecone · OpenRouter · Gemini Flash 2.5 | [🔗 Live](https://genai-concepts-chat.railway.app) |
-| [Pinecone Agentic Search MCP Server](https://github.com/Paul-Orlando/pinecone-mcp-server) | Custom MCP Server · Agentic RAG | Node.js · TypeScript · Pinecone · OpenRouter · MCP Protocol · Railway | [🔗 Live](https://pinecone-mcp-server.railway.app) |
+| [GenAI Concepts Chat](https://github.com/Paul-Orlando/genai-concepts-chat) | Agentic RAG + Custom MCP Server | Node.js · Express · TypeScript · Pinecone · OpenRouter · Gemini Flash 2.5 
+| [Pinecone Agentic Search MCP Server](https://github.com/Paul-Orlando/pinecone-mcp-server) | Custom MCP Server · Agentic RAG | Node.js · TypeScript · Pinecone · OpenRouter · MCP Protocol · Railway 
+
 | AI Document Generator | LLM Chain + Quality Gate | n8n · OpenRouter · GPT-4.1 · LangChain | — |
 | AI Agent Team — Supervisor Pattern | Supervisor Orchestration | Flowise AgentFlows V2/V3 · GPT-4o · LangChain | — |
 | AI Food Chatbot Agent | Agentic RAG + Tool Routing | Flowise · GPT-4o · Postgres · OpenAI Moderation | — |
