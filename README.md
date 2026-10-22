@@ -96,12 +96,9 @@ A fully functional travel booking agent demonstrating serverless multi-tool agen
 | [Food Chatbot App](https://github.com/Paul-Orlando/food-chatbot-app) | Agentic RAG + Cart | Next.js · FastAPI · ChromaDB · OpenAI | [🔗 Live](https://food-chatbot-app.vercel.app) |
 | [AI Agent Team Supervisor App](https://github.com/Paul-Orlando/ai-agent-team-supervisor-app) | Supervisor Pattern | OpenAI Agents SDK · Next.js · FastAPI · ChromaDB | [🔗 Live](https://ai-agent-team-supervisor-app.vercel.app) |
 | [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenAI · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
-| [Deep Research Agent App](https://github.com/Paul-Orlando/deep-research-agent-app) | Full-Stack Research App | Claude Code · Next.js · OpenRouter · Exa AI · TypeScript
 | [Web Research Hub](https://github.com/Paul-Orlando/web-research-hub) | Hierarchical 3-Agent Pipeline + MCP | Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI · MCP | [🔗 Live](https://web-research-hub.vercel.app) |
-| [Web Research Hub MCP Server](https://github.com/Paul-Orlando/web-research-hub-mcp-server) | Custom MCP Server · Research Tools | FastAPI · FastMCP · Streamable HTTP · Exa AI · Python
-| [GenAI Concepts Chat](https://github.com/Paul-Orlando/genai-concepts-chat) | Agentic RAG + Custom MCP Server | Node.js · Express · TypeScript · Pinecone · OpenRouter · Gemini Flash 2.5 
-| [Pinecone Agentic Search MCP Server](https://github.com/Paul-Orlando/pinecone-mcp-server) | Custom MCP Server · Agentic RAG | Node.js · TypeScript · Pinecone · OpenRouter · MCP Protocol · Railway 
-
+| [Web Research Hub MCP Server](https://github.com/Paul-Orlando/web-research-hub-mcp-server) | Custom MCP Server · Research Tools | FastAPI · FastMCP · Streamable HTTP · Exa AI · Python | — |
+| [Pinecone Agentic Search MCP Server](https://github.com/Paul-Orlando/pinecone-mcp-server) | Custom MCP Server · Agentic RAG | Node.js · TypeScript · Pinecone · OpenRouter · MCP Protocol · Railway | — |
 | AI Document Generator | LLM Chain + Quality Gate | n8n · OpenRouter · GPT-4.1 · LangChain | — |
 | AI Agent Team — Supervisor Pattern | Supervisor Orchestration | Flowise AgentFlows V2/V3 · GPT-4o · LangChain | — |
 | AI Food Chatbot Agent | Agentic RAG + Tool Routing | Flowise · GPT-4o · Postgres · OpenAI Moderation | — |
