@@ -44,19 +44,20 @@ An employee-facing operations app for a fictional U.S. auto parts distributor (1
 ---
 
 ### Web Research Hub — Cited Research Reports with Verified Sources
-**Three-agent research pipeline with a custom MCP tool server and a server-side citation guard, measured by a 45-run evaluation**
+**Three-agent research pipeline with a custom MCP tool server and verified, ID-based citations, measured across three 45-run evaluations**
 
 Ask a research question and get a categorized, cited report built from live web sources, with a live source panel and export to PDF, DOCX and Markdown:
 
 - **Three-Agent Pipeline:** Planner (LLM) splits the question into dated search subtasks → Orchestrator (pure Python, no LLM) runs them → Summarizer (LLM) writes the cited report
 - **Custom MCP Tool Server:** Search, page fetch and export run on a separate MCP server over Streamable HTTP, with API key auth and rate limiting, reusable by any MCP client
-- **Citation Guard:** Server-side check that every URL in a report was actually returned by the search step; an invented link or a report with too few citations gets one retry, and anything still invented is removed and marked (unverified)
-- **Evaluation:** 15 questions × 3 runs with an LLM judge, before and after the guard — invented citations **5 → 0** in 45 runs, zero-citation reports **1 → 0**, citation coverage **69% → 72%**, **97%** of 225 judged claims supported by their source, false-premise question flagged **3/3**, at **+4%** cost (**$0.033 per query**)
-- **Found by the eval:** The first version of the guard stripped real URLs containing parentheses; replaying stored reports caught it before the numbers were published
+- **ID-Based Citations:** The summarizer never writes URLs. It cites numbered sources ([S1], [S2]) and the server maps each ID to the exact link the search returned, so a citation can't point anywhere the app didn't actually retrieve
+- **Citation Guard:** Server-side backstop: an invalid ID or raw URL gets one retry, and anything still invented is removed and marked (unverified)
+- **Evaluation:** 15 questions × 3 runs with an LLM judge, comparing three versions — invented links in reports **5 → 0**, citation coverage **69% → 84%**, **99%** of 225 judged claims supported by their source, **0** guard retries needed, **24% faster** and **7% cheaper** (**$0.029 per query**)
+- **Found by the eval:** The original "invented" links were real sources copied with small errors (an extra digit, .com for .org), and a retry asking for more citations made the model invent sources. Moving to ID citations fixed both at the source; an early guard bug (stripping URLs with parentheses) was also caught by replaying stored reports
 - **Testing:** Mocked pytest suite (no API keys needed) with GitHub Actions CI on every push
 - **Deployment:** Next.js on Vercel; backend and MCP server on Railway
 
-**Pattern:** LLM planner → Deterministic orchestrator → MCP tool server → LLM summarizer → Citation guard → Measured by evaluation
+**Pattern:** LLM planner → Deterministic orchestrator → MCP tool server → LLM summarizer with ID citations → Server-side ID-to-URL mapping + guard → Measured by evaluation
 
 **GitHub:** [web-research-hub](https://github.com/Paul-Orlando/web-research-hub) · [web-research-hub-mcp-server](https://github.com/Paul-Orlando/web-research-hub-mcp-server)  
 **Live:** [web-research-hub.vercel.app](https://web-research-hub.vercel.app)
@@ -184,7 +185,7 @@ FinAlly demonstrates real-time state management with SSE streaming, connection s
 Gatewell Parts Desk enforces role permissions on the server, not in the prompt: every tool result passes through redaction and data-scope filters before the model sees it, so a warehouse role cannot receive costs even if asked directly. A server-side grounding check withholds any figure the model states without a tool lookup, and every question and tool call is written to an audit log.
 
 **Citation Verification**
-Web Research Hub never trusts the model to cite honestly: a server-side guard checks every visible URL against the sources the search step actually returned, retries once, and removes anything still invented. A 45-run evaluation measured the result (invented citations 5 → 0) and the cost (+4% per query, +0.8 s).
+Web Research Hub never lets the model write a link. It cites numbered sources, and the server maps each ID to the exact URL the search step returned, with a guard as backstop for anything else. Three 45-run evaluations measured the path there: invented links 5 → 0, citation coverage 69% → 84%, and the final version is faster and cheaper than having no guard at all.
 
 **MCP Server Security**
 Custom MCP servers implement API key authentication (`X-API-Key` header, 401 on invalid key) and sliding-window rate limiting (5–10 requests/IP/hour, 429 on exceed) with self-host instructions embedded in every error response. Rate limiting is implemented as pure middleware without third-party auth frameworks — correct IP detection behind Railway's proxy via `X-Forwarded-For` header parsing.
