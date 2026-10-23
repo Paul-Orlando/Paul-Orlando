@@ -43,6 +43,28 @@ An employee-facing operations app for a fictional U.S. auto parts distributor (1
 
 ---
 
+### Web Research Hub — Cited Research Reports with Verified Sources
+**Three-agent research pipeline with a custom MCP tool server and a server-side citation guard, measured by a 45-run evaluation**
+
+Ask a research question and get a categorized, cited report built from live web sources, with a live source panel and export to PDF, DOCX and Markdown:
+
+- **Three-Agent Pipeline:** Planner (LLM) splits the question into dated search subtasks → Orchestrator (pure Python, no LLM) runs them → Summarizer (LLM) writes the cited report
+- **Custom MCP Tool Server:** Search, page fetch and export run on a separate MCP server over Streamable HTTP, with API key auth and rate limiting, reusable by any MCP client
+- **Citation Guard:** Server-side check that every URL in a report was actually returned by the search step; an invented link or a report with too few citations gets one retry, and anything still invented is removed and marked (unverified)
+- **Evaluation:** 15 questions × 3 runs with an LLM judge, before and after the guard — invented citations **5 → 0** in 45 runs, zero-citation reports **1 → 0**, citation coverage **69% → 72%**, **97%** of 225 judged claims supported by their source, false-premise question flagged **3/3**, at **+4%** cost (**$0.033 per query**)
+- **Found by the eval:** The first version of the guard stripped real URLs containing parentheses; replaying stored reports caught it before the numbers were published
+- **Testing:** Mocked pytest suite (no API keys needed) with GitHub Actions CI on every push
+- **Deployment:** Next.js on Vercel; backend and MCP server on Railway
+
+**Pattern:** LLM planner → Deterministic orchestrator → MCP tool server → LLM summarizer → Citation guard → Measured by evaluation
+
+**GitHub:** [web-research-hub](https://github.com/Paul-Orlando/web-research-hub) · [web-research-hub-mcp-server](https://github.com/Paul-Orlando/web-research-hub-mcp-server)  
+**Live:** [web-research-hub.vercel.app](https://web-research-hub.vercel.app)
+
+**Stack:** Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI · FastMCP · pytest · GitHub Actions · Vercel · Railway
+
+---
+
 ### FinAlly — AI Trading Workstation
 **Multi-agent trading system with real-time streaming and production safety controls**
 
@@ -95,7 +117,7 @@ A fully functional travel booking agent demonstrating serverless multi-tool agen
 | [Food Chatbot App](https://github.com/Paul-Orlando/food-chatbot-app) | Agentic RAG + Cart | Next.js · FastAPI · ChromaDB · OpenAI | [🔗 Live](https://food-chatbot-app.vercel.app) |
 | [AI Agent Team Supervisor App](https://github.com/Paul-Orlando/ai-agent-team-supervisor-app) | Supervisor Pattern | OpenAI Agents SDK · Next.js · FastAPI · ChromaDB | [🔗 Live](https://ai-agent-team-supervisor-app.vercel.app) |
 | [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
-| [Web Research Hub](https://github.com/Paul-Orlando/web-research-hub) | Hierarchical 3-Agent Pipeline + MCP | Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI · MCP | [🔗 Live](https://web-research-hub.vercel.app) |
+| [Web Research Hub](https://github.com/Paul-Orlando/web-research-hub) | 3-Agent Pipeline + MCP + Citation Guard + Evaluated | Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI · MCP | [🔗 Live](https://web-research-hub.vercel.app) |
 | [Web Research Hub MCP Server](https://github.com/Paul-Orlando/web-research-hub-mcp-server) | Custom MCP Server · Research Tools | FastAPI · FastMCP · Streamable HTTP · Exa AI · Python | — |
 | [Pinecone Agentic Search MCP Server](https://github.com/Paul-Orlando/pinecone-mcp-server) | Custom MCP Server · Agentic RAG | Node.js · TypeScript · Pinecone · OpenRouter · MCP Protocol · Railway | — |
 
@@ -128,9 +150,9 @@ I use generative AI tools with prompt engineering techniques to produce brand im
 
 ## Core Skills
 
-**Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development, serverless agent deployment, real-time streaming systems, role-based tool access, grounding checks, LLM evaluation sets
+**Agent Design** — tool routing, prompt engineering, multi-agent orchestration, supervisor patterns, retrieval-augmented generation, hallucination detection, moderation, memory, full-stack AI applications, MCP server development, serverless agent deployment, real-time streaming systems, role-based tool access, grounding checks, citation verification, LLM evaluation sets, LLM-as-judge scoring
 
-**Cloud & Infrastructure** — AWS Lambda, API Gateway, Bedrock, Cognito, S3, Knowledge Bases, CloudWatch, serverless architecture patterns, Railway, Docker multi-stage builds
+**Cloud & Infrastructure** — AWS Lambda, API Gateway, Bedrock, Cognito, S3, Knowledge Bases, CloudWatch, serverless architecture patterns, Railway, Vercel, Docker multi-stage builds, GitHub Actions CI
 
 **Stack** — Flowise · LangChain · OpenAI API · Python · FastAPI · Next.js · n8n · TypeScript · OpenRouter · Exa · Postgres · FAISS · Neon · Supabase · Claude Code · Pinecone · FastMCP · MCP Protocol · Railway · Vercel · Strands SDK · Cerebras · Gemini · Chart.js
 
@@ -161,6 +183,9 @@ FinAlly demonstrates real-time state management with SSE streaming, connection s
 **Data Access & Answer Grounding**
 Gatewell Parts Desk enforces role permissions on the server, not in the prompt: every tool result passes through redaction and data-scope filters before the model sees it, so a warehouse role cannot receive costs even if asked directly. A server-side grounding check withholds any figure the model states without a tool lookup, and every question and tool call is written to an audit log.
 
+**Citation Verification**
+Web Research Hub never trusts the model to cite honestly: a server-side guard checks every visible URL against the sources the search step actually returned, retries once, and removes anything still invented. A 45-run evaluation measured the result (invented citations 5 → 0) and the cost (+4% per query, +0.8 s).
+
 **MCP Server Security**
 Custom MCP servers implement API key authentication (`X-API-Key` header, 401 on invalid key) and sliding-window rate limiting (5–10 requests/IP/hour, 429 on exceed) with self-host instructions embedded in every error response. Rate limiting is implemented as pure middleware without third-party auth frameworks — correct IP detection behind Railway's proxy via `X-Forwarded-For` header parsing.
 
@@ -168,7 +193,7 @@ Custom MCP servers implement API key authentication (`X-API-Key` header, 401 on 
 The serverless agentic AI system implements Cognito OAuth2 authentication, per-user session isolation, S3-backed state management, and automatic horizontal scaling. Infrastructure costs are controlled through serverless pay-per-use pricing (~$0.02/request), with no idle server overhead.
 
 **Cost Protection**
-All LLM API keys (OpenAI, OpenRouter) are capped at hard monthly spend limits. Exa AI auto-recharge is capped per calendar month. Rate limiting at the infrastructure layer provides the first line of defense; spend caps at the provider level provide a hard ceiling if rate limiting is ever bypassed.
+Each app has its own LLM API key (OpenAI, OpenRouter), each capped at a hard spend limit, so one app or one evaluation run can't drain another's budget. Exa AI auto-recharge is capped per calendar month. Rate limiting at the infrastructure layer provides the first line of defense; spend caps at the provider level provide a hard ceiling if rate limiting is ever bypassed.
 
 Production AI systems require controls at every layer — request-level rate limiting, infrastructure-level authentication, provider-level spend caps, and cloud-native security. Each application in this portfolio is built with these standards, following the practices real deployments need, where cost, security, reliability, and real-time performance are non-negotiable.
 
