@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/33584803/README.md)
 # Paul Orlando
 **Creative Technologist & AI Agent Developer**
 
@@ -6,7 +5,7 @@ I design and build AI agent systems to production standards — from single-agen
 
 Based in US & EU/Ireland.
 
-🌐 [paulforlando.com](https://paulforlando.com)  |  💼 [LinkedIn](https://linkedin.com/in/paul-orlando)  |  📧 Available for freelance & consulting
+🌐 [paulforlando.com](https://www.paulforlando.com)  |  💼 [LinkedIn](https://www.linkedin.com/in/paul-orlando-7841b5154/)  |  📧 Available for freelance & consulting
 
 ---
 
@@ -54,14 +53,14 @@ An AI-powered trading platform demonstrating multi-agent orchestration, real-tim
 - **Domain Logic:** Portfolio mathematics, P&L tracking, position constraints, audit logging
 - **Testing:** Playwright E2E suite (10 tests, 4 consecutive fresh runs, all passing)
 - **Cost Protection:** Dual-layer rate limiting (15 chat/hr, 20 trades/hr code-level + $5 monthly provider cap)
-- **Deployment:** Docker multi-stage build, Railway serverless, automatic health checks
+- **Deployment:** Docker multi-stage build with a locked dependency set, Railway, automatic health checks
 
 **Pattern:** Deterministic agents (Risk, Portfolio, Analyzer) + LLM orchestrator → Real-time state management → Atomic transactions → E2E tested
 
 **GitHub:** [multi_agent_trading_app](https://github.com/Paul-Orlando/multi_agent_trading_app)  
 **Live:** [multiagenttradingapp-production.up.railway.app](https://multiagenttradingapp-production.up.railway.app)
 
-**Stack:** FastAPI · Next.js · SQLite · Playwright · Cerebras/OpenRouter · SSE · Railway
+**Stack:** FastAPI · Next.js · SQLite · Playwright · OpenRouter (Cerebras) · LiteLLM · SSE · Docker · Railway
 
 ---
 
@@ -90,22 +89,27 @@ A fully functional travel booking agent demonstrating serverless multi-tool agen
 | Agent | Pattern | Stack | Demo |
 |---|---|---|---|
 | [Gatewell Parts Desk](https://github.com/Paul-Orlando/gatewell-parts-desk) | Role-Aware Tool Agent + Grounding Check + Evaluated | FastAPI · Python · SQLite · OpenRouter · Gemini 3.1 Flash-Lite · Railway | [🔗 Live](https://web-production-25c5.up.railway.app) |
-| [FinAlly Trading App](https://github.com/Paul-Orlando/multi_agent_trading_app) | Multi-Agent + Real-Time Streaming + E2E Tested | FastAPI · Next.js · SQLite · Playwright · Railway · Cerebras | [🔗 Live](https://multiagenttradingapp-production.up.railway.app) |
+| [FinAlly Trading App](https://github.com/Paul-Orlando/multi_agent_trading_app) | Multi-Agent + Real-Time Streaming + E2E Tested | FastAPI · Next.js · SQLite · Playwright · OpenRouter (Cerebras) · Railway | [🔗 Live](https://multiagenttradingapp-production.up.railway.app) |
 | [Prelegal](https://github.com/Paul-Orlando/prelegal_document_app) | AI Interview + Document Assembly | Node.js · Express · SQLite · OpenRouter · Common Paper Templates | [🔗 Live](https://prelegaldocumentapp-production.up.railway.app/) |
 | [Serverless Agentic AI Travel Agent](https://github.com/Paul-Orlando/serverless-agentic-ai-travel-agent) | Multi-Tool Orchestration + Memory + RAG | Strands SDK · Bedrock · Lambda · API Gateway · Cognito · S3 | [🔗 Repo](https://github.com/Paul-Orlando/serverless-agentic-ai-travel-agent) |
 | [Food Chatbot App](https://github.com/Paul-Orlando/food-chatbot-app) | Agentic RAG + Cart | Next.js · FastAPI · ChromaDB · OpenAI | [🔗 Live](https://food-chatbot-app.vercel.app) |
 | [AI Agent Team Supervisor App](https://github.com/Paul-Orlando/ai-agent-team-supervisor-app) | Supervisor Pattern | OpenAI Agents SDK · Next.js · FastAPI · ChromaDB | [🔗 Live](https://ai-agent-team-supervisor-app.vercel.app) |
-| [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenAI · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
+| [Data Analysis Agent App](https://github.com/Paul-Orlando/data-analysis-agent-app) | Interactive Data Agent | Claude Code · Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Recharts | [🔗 Live](https://data-analysis-agent-app.vercel.app) |
 | [Web Research Hub](https://github.com/Paul-Orlando/web-research-hub) | Hierarchical 3-Agent Pipeline + MCP | Next.js · FastAPI · OpenRouter · Gemini 2.5 Flash · Exa AI · MCP | [🔗 Live](https://web-research-hub.vercel.app) |
 | [Web Research Hub MCP Server](https://github.com/Paul-Orlando/web-research-hub-mcp-server) | Custom MCP Server · Research Tools | FastAPI · FastMCP · Streamable HTTP · Exa AI · Python | — |
 | [Pinecone Agentic Search MCP Server](https://github.com/Paul-Orlando/pinecone-mcp-server) | Custom MCP Server · Agentic RAG | Node.js · TypeScript · Pinecone · OpenRouter · MCP Protocol · Railway | — |
-| AI Document Generator | LLM Chain + Quality Gate | n8n · OpenRouter · GPT-4.1 · LangChain | — |
-| AI Agent Team — Supervisor Pattern | Supervisor Orchestration | Flowise AgentFlows V2/V3 · GPT-4o · LangChain | — |
-| AI Food Chatbot Agent | Agentic RAG + Tool Routing | Flowise · GPT-4o · Postgres · OpenAI Moderation | — |
-| AI Multi-Agent Content Pipeline | Sequential Multi-Agent | Flowise · GPT-4o · FAISS · RAG | — |
-| AI Web Research Agent | RAG + Web Scraping | Flowise · GPT-4o-mini · FAISS · Cheerio | — |
-| AI Research Assistant RAG | Lightweight RAG | Python · OpenAI · NumPy · Scikit-learn | — |
-| Data Analysis Agent | Custom GPT | GPT-4 · Python · Pandas · Scikit-learn | — |
+
+### Earlier Builds — Low-Code & Prototypes
+
+| Agent | Pattern | Stack |
+|---|---|---|
+| [AI Document Generator](https://github.com/Paul-Orlando/ai-n8n-document-generator) | LLM Chain + Quality Gate | n8n · OpenRouter · GPT-4.1 · LangChain |
+| [AI Agent Team — Supervisor Pattern](https://github.com/Paul-Orlando/ai-agent-team-supervisor-pattern) | Supervisor Orchestration | Flowise AgentFlows V2/V3 · GPT-4o · LangChain |
+| [AI Food Chatbot Agent](https://github.com/Paul-Orlando/ai-food-chatbot-agent) | Agentic RAG + Tool Routing | Flowise · GPT-4o · Postgres · OpenAI Moderation |
+| [AI Multi-Agent Content Pipeline](https://github.com/Paul-Orlando/ai-multi-agent-content-pipeline) | Sequential Multi-Agent | Flowise · GPT-4o · FAISS · RAG |
+| [AI Web Research Agent](https://github.com/Paul-Orlando/ai-web-research-agent) | RAG + Web Scraping | Flowise · GPT-4o-mini · FAISS · Cheerio |
+| [AI Research Assistant RAG](https://github.com/Paul-Orlando/ai-research-assistant-rag) | Lightweight RAG | Python · OpenAI · NumPy · Scikit-learn |
+| [Data Analysis Agent (Custom GPT)](https://github.com/Paul-Orlando/data-analysis-agent) | Custom GPT | GPT-4 · Python · Pandas · Scikit-learn |
 
 ---
 
@@ -118,7 +122,7 @@ I use generative AI tools with prompt engineering techniques to produce brand im
 - Commercial Product Visualization
 - Lifestyle Imagery
 
-🔗 [View Portfolio on ArtStation](https://www.artstation.com/paul-orlando)  |  [Repository](https://github.com/Paul-Orlando/ai-product-visualization)
+🔗 [View Portfolio on ArtStation](https://paulorlando.artstation.com/albums/15070123)  |  [Repository](https://github.com/Paul-Orlando/ai-product-visualization)
 
 ---
 
